@@ -7,16 +7,13 @@ import {FormGroup, FormControl} from "@angular/forms";
 })
 export class LoginFormComponent {
 
-  form: FormGroup;
-
-  constructor(){
-    this.form = new FormGroup({
+   form = new FormGroup({
       username: new FormControl(),
       password: new FormControl()
     });
-  }
+
 
   login(){
-    console.log(this.form.value)
+    console.log(this.form.value);
   }
 }
