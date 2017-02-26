@@ -1,7 +1,10 @@
 import { Component } from '@angular/core';
+import {FormBuilder} from "@angular/forms";
 
 @Component({
   selector: 'my-app',
-  template: `<h1>Hello {{name}}</h1>`,
+  template: `<login-form></login-form>`
 })
-export class AppComponent  { name = 'Angular'; }
+export class AppComponent  {
+
+}

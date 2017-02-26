@@ -1,0 +1,38 @@
+<div class="row">
+    <div class="wrapper">
+        <form class="form-signin" [formGroup]="form" (ngSubmit)="login()">
+            <h2 class="form-signin-heading">Please login</h2>
+            <div class="form-group">
+                <input type="text"
+                           class="form-control"
+                           name="username"
+                           placeholder="Username"
+                           required
+                           #username
+                           formControlName="username"
+                           autofocus=""/>
+                <div *ngIf="username.touched && !username.valid"
+                         class="alert alert-danger">
+                        Name is required.
+                </div>
+            </div>
+            <div class="form-group">
+                <input type="password"
+                       class="form-control"
+                       name="password"
+                       placeholder="Password"
+                       required
+                       #password
+                       formControlName="password"/>
+                <div *ngIf="password.touched && !password.valid"
+                     class="alert alert-danger">
+                    Name is required.
+                </div>
+            </div>
+            <button class="btn btn-lg btn-primary btn-block"
+                    type="submit">
+                Login
+            </button>
+        </form>
+    </div>
+</div>
