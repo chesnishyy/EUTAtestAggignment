@@ -1,7 +1,8 @@
 import {Component} from "@angular/core";
 import {FormGroup, FormControl} from "@angular/forms";
 import {Router} from "@angular/router";
-import {UserComponent} from "./user.component";
+import {LoginService} from "./login.service";
+
 
 @Component({
   selector: 'login-form',
@@ -14,14 +15,14 @@ export class LoginFormComponent {
       password: new FormControl()
   });
 
-  constructor(private _router: Router) {
+  constructor(private _router: Router, private _loginService: LoginService) {
 
   }
 
   login(){
     if(this.form.valid){
-      this._router.navigate(['/user'])
-      console.log(this.form.value);
+      this._loginService.username = this.form.value.username;
+      this._router.navigate(['/user']);
     }
   }
 }

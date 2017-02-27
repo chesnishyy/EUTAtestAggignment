@@ -7,6 +7,8 @@ import {LoginFormComponent} from "./login-form.component";
 import {RouterModule, Routes} from "@angular/router";
 import {UserComponent} from "./user.component";
 import {NavbarComponent} from "./navbar.component";
+import {SwitchLanguageComponent} from "./switch-language.component";
+import {LoginService} from "./login.service";
 
 const appRoutes: Routes = [
   { path: '', component: LoginFormComponent},
@@ -19,13 +21,15 @@ const appRoutes: Routes = [
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
   ],
+  providers:[ LoginService ],
   declarations: [
     AppComponent,
     LoginFormComponent,
     UserComponent,
-    NavbarComponent
+    NavbarComponent,
+    SwitchLanguageComponent
   ],
   bootstrap:    [ AppComponent ]
 })

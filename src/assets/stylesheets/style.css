@@ -39,11 +39,6 @@ input[type="password"] {
     border-top-right-radius: 0;
 }
 
-.navbar-my {
-  display: flex;
-  justify-content: flex-end;
-}
-
 .btn-my {
-  margin-right: 5px;
+  margin-right: 7px !important;
 }
